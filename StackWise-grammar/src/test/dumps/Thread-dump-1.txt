@@ -1,0 +1,1147 @@
+
+"RMI TCP Connection(207)-10.13.1.18" - Thread t@172
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	- locked <584982c0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:538)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <6756a33c> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"RMI TCP Connection(206)-10.13.1.18" - Thread t@171
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	- locked <1794fdad> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:538)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <14d733fe> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"RMI TCP Connection(205)-10.13.1.18" - Thread t@170
+   java.lang.Thread.State: RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:75)
+	at sun.reflect.GeneratedMethodAccessor52.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:279)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at javax.management.StandardMBean.invoke(StandardMBean.java:405)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1487)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:97)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1328)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1420)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:848)
+	at sun.reflect.GeneratedMethodAccessor841.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <a3812f8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"RMI TCP Connection(204)-10.13.1.18" - Thread t@168
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	- locked <6037d8c1> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:538)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <3f5bb31f> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"RMI TCP Connection(idle)" - Thread t@167
+   java.lang.Thread.State: TIMED_WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <1a4dcb3> (a java.util.concurrent.SynchronousQueue$TransferStack)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:359)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:942)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(196)-10.13.1.18" - Thread t@166
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	- locked <274daa89> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:538)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <7e2daa46> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-45" - Thread t@158
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-44" - Thread t@157
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <1897d690> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <474be01d> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-40" - Thread t@151
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <3c82137b> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <617549b4> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-39" - Thread t@150
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <6fa5bc8f> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <2d0aead1> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-37" - Thread t@148
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-36" - Thread t@147
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <7ace634c> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <46780c7a> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-35" - Thread t@146
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-33" - Thread t@144
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.Throwable.getStackTraceElement(Native Method)
+	at java.lang.Throwable.getOurStackTrace(Throwable.java:827)
+	- locked <577af1e3> (a java.lang.Exception)
+	at java.lang.Throwable.getStackTrace(Throwable.java:816)
+	at java.lang.Thread.getStackTrace(Thread.java:1568)
+	at net.admin4j.jdbc.driver.sql.ConnectionWrapper30Base.registerSqlStatement(ConnectionWrapper30Base.java:63)
+	at net.admin4j.jdbc.driver.sql.ConnectionWrapper30Base.prepareStatement(ConnectionWrapper30Base.java:214)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingConnection.prepareStatement(DelegatingConnection.java:281)
+	at org.apache.tomcat.dbcp.dbcp.PoolingDataSource$PoolGuardConnectionWrapper.prepareStatement(PoolingDataSource.java:313)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:162)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:186)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:160)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1884)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1861)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1838)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:909)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:354)
+	at org.hibernate.loader.Loader.doList(Loader.java:2551)
+	at org.hibernate.loader.Loader.doList(Loader.java:2537)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2367)
+	at org.hibernate.loader.Loader.list(Loader.java:2362)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:351)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1869)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:311)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:141)
+	at com.jmu.scholar.dao.FormRuleDAO.findByFormId(FormRuleDAO.java:50)
+	at com.jmu.scholar.domain.FormRuleManager.findByFormId(FormRuleManager.java:19)
+	at com.jmu.scholar.domain.DisplayFormVORuleFilter.isIncluded(DisplayFormVORuleFilter.java:49)
+	at com.jmu.scholar.domain.DisplayFormVORuleFilter.isIncluded(DisplayFormVORuleFilter.java:43)
+	at com.jmu.scholar.util.CollectionFilter.filter(CollectionFilter.java:34)
+	at com.jmu.scholar.domain.FormManager.findStudentAssignedForms(FormManager.java:138)
+	at com.jmu.scholar.ui.external.HomePageBean.initFormLists(HomePageBean.java:80)
+	at com.jmu.scholar.ui.external.HomePageBean.getPendingForms(HomePageBean.java:132)
+	at sun.reflect.GeneratedMethodAccessor1314.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at javax.el.BeanELResolver.getValue(BeanELResolver.java:87)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:67)
+	at org.apache.myfaces.el.unified.resolver.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:179)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:183)
+	at org.apache.el.parser.AstFunction.getValue(AstFunction.java:103)
+	at org.apache.el.parser.AstGreaterThan.getValue(AstGreaterThan.java:38)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:185)
+	at org.apache.myfaces.view.facelets.el.ContextAwareTagValueExpression.getValue(ContextAwareTagValueExpression.java:96)
+	at javax.faces.component._DeltaStateHelper.eval(_DeltaStateHelper.java:266)
+	at javax.faces.component.UIComponentBase.isRendered(UIComponentBase.java:1185)
+	at org.apache.myfaces.component.html.ext.AbstractHtmlDataTable.isRendered(AbstractHtmlDataTable.java:1746)
+	at org.apache.myfaces.component.html.ext.AbstractHtmlDataTable.processDecodes(AbstractHtmlDataTable.java:837)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1371)
+	at javax.faces.component.UIForm.processDecodes(UIForm.java:157)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1371)
+	at javax.faces.component.UIViewRoot._processDecodesDefault(UIViewRoot.java:1446)
+	at javax.faces.component.UIViewRoot.access$400(UIViewRoot.java:74)
+	at javax.faces.component.UIViewRoot$ApplyRequestValuesPhaseProcessor.process(UIViewRoot.java:1537)
+	at javax.faces.component.UIViewRoot._process(UIViewRoot.java:1412)
+	at javax.faces.component.UIViewRoot.processDecodes(UIViewRoot.java:772)
+	at org.apache.myfaces.lifecycle.ApplyRequestValuesExecutor.execute(ApplyRequestValuesExecutor.java:38)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.executePhase(LifecycleImpl.java:170)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:197)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.securityclient.ui.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:105)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.scholar.ui.external.filter.VerisignTransactionRecordingFilter.doFilter(VerisignTransactionRecordingFilter.java:120)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.common.ui.common.filter.HibernateSessionFilter.doFilter(HibernateSessionFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.myfaces.webapp.filter.ExtensionsFilter.doFilter(ExtensionsFilter.java:357)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.common.ui.common.filter.CharsetFilter.doFilter(CharsetFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.ConcurrentUsageFilter.doFilter(ConcurrentUsageFilter.java:54)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.PerformanceMonitoringFilter.doFilter(PerformanceMonitoringFilter.java:85)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.ErrorNotificationFilter.doFilter(ErrorNotificationFilter.java:145)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:611)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.josso.tc60.agent.SSOAgentValve.invoke(SSOAgentValve.java:681)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <42fdfdbd> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <42253518> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-31" - Thread t@142
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <3af07a25> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <1746f543> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-30" - Thread t@141
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-29" - Thread t@140
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <7eb21dc5> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <591b65b4> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-28" - Thread t@139
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.Thread.currentThread(Native Method)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.currentThreadShouldBeStopped(ThreadPoolExecutor.java:136)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:97)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-27" - Thread t@105
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"MultiThreadedHttpConnectionManager cleanup" - Thread t@87
+   java.lang.Thread.State: WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <43368770> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$ReferenceQueueThread.run(MultiThreadedHttpConnectionManager.java:1122)
+
+   Locked ownable synchronizers:
+	- None
+
+"MultiThreadedHttpConnectionManager cleanup" - Thread t@83
+   java.lang.Thread.State: WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <605efd44> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$ReferenceQueueThread.run(MultiThreadedHttpConnectionManager.java:1122)
+
+   Locked ownable synchronizers:
+	- None
+
+"AWT-Windows" - Thread t@75
+   java.lang.Thread.State: RUNNABLE
+	at sun.awt.windows.WToolkit.eventLoop(Native Method)
+	at sun.awt.windows.WToolkit.run(WToolkit.java:299)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"Java2D Disposer" - Thread t@73
+   java.lang.Thread.State: WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <15fc601c> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at sun.java2d.Disposer.run(Disposer.java:145)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"JMX server connection timeout 70" - Thread t@70
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <67abd99b> (a [I)
+	at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:168)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"JMX server connection timeout 69" - Thread t@69
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <435b8449> (a [I)
+	at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:168)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI Scheduler(0)" - Thread t@66
+   java.lang.Thread.State: TIMED_WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <79e523f2> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-25" - Thread t@63
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <6b0e32fa> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <215ca18f> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-23" - Thread t@61
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.DataInputStream.readFully(DataInputStream.java:195)
+	at java.io.DataInputStream.readFully(DataInputStream.java:169)
+	at net.sourceforge.jtds.jdbc.SharedSocket.readPacket(SharedSocket.java:850)
+	at net.sourceforge.jtds.jdbc.SharedSocket.getNetPacket(SharedSocket.java:731)
+	- locked <3f77606b> (a java.util.concurrent.ConcurrentHashMap)
+	at net.sourceforge.jtds.jdbc.ResponseStream.getPacket(ResponseStream.java:477)
+	at net.sourceforge.jtds.jdbc.ResponseStream.read(ResponseStream.java:114)
+	at net.sourceforge.jtds.jdbc.ResponseStream.peek(ResponseStream.java:99)
+	at net.sourceforge.jtds.jdbc.TdsCore.wait(TdsCore.java:4127)
+	at net.sourceforge.jtds.jdbc.TdsCore.executeSQL(TdsCore.java:1086)
+	- locked <24ceecc4> (a net.sourceforge.jtds.jdbc.TdsCore)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQLQuery(JtdsStatement.java:493)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeQuery(JtdsStatement.java:1427)
+	at net.admin4j.jdbc.driver.sql.StatementWrapper30Base.executeQuery(StatementWrapper30Base.java:145)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.PoolableConnectionFactory.validateConnection(PoolableConnectionFactory.java:658)
+	at org.apache.tomcat.dbcp.dbcp.PoolableConnectionFactory.validateObject(PoolableConnectionFactory.java:635)
+	at org.apache.tomcat.dbcp.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1202)
+	at org.apache.tomcat.dbcp.dbcp.AbandonedObjectPool.borrowObject(AbandonedObjectPool.java:79)
+	at org.apache.tomcat.dbcp.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:106)
+	at org.apache.tomcat.dbcp.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.jmu.common.util.data.DatabaseStatementExecutor.executeUpdate(DatabaseStatementExecutor.java:141)
+	at com.jmu.common.util.data.HibernateInterceptorDbLogger.save(HibernateInterceptorDbLogger.java:143)
+	at com.jmu.common.util.data.HibernateInterceptorDbLogger.afterTransactionCompletion(HibernateInterceptorDbLogger.java:44)
+	at org.hibernate.internal.SessionImpl.afterTransactionCompletion(SessionImpl.java:530)
+	at org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl.afterTransaction(TransactionCoordinatorImpl.java:145)
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.afterTransactionCompletion(JdbcTransaction.java:138)
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.commit(AbstractTransactionImpl.java:182)
+	at com.jmu.common.util.TransContext.commitSession(TransContext.java:246)
+	at com.jmu.common.ui.common.filter.HibernateSessionFilter.doFilter(HibernateSessionFilter.java:57)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.myfaces.webapp.filter.ExtensionsFilter.doFilter(ExtensionsFilter.java:357)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.common.ui.common.filter.CharsetFilter.doFilter(CharsetFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.ConcurrentUsageFilter.doFilter(ConcurrentUsageFilter.java:54)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.PerformanceMonitoringFilter.doFilter(PerformanceMonitoringFilter.java:85)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.ErrorNotificationFilter.doFilter(ErrorNotificationFilter.java:145)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:611)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.josso.tc60.agent.SSOAgentValve.invoke(SSOAgentValve.java:681)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <257dc57d> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <65687839> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-22" - Thread t@60
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.Object.hashCode(Native Method)
+	at java.util.HashMap.hash(HashMap.java:366)
+	at java.util.HashMap.getEntry(HashMap.java:466)
+	at java.util.HashMap.containsKey(HashMap.java:453)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.isFilledView(FaceletViewDeclarationLanguage.java:690)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.buildView(FaceletViewDeclarationLanguage.java:382)
+	at org.apache.myfaces.lifecycle.RenderResponseExecutor.execute(RenderResponseExecutor.java:78)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:241)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.securityclient.ui.filter.AuthenticationFilter.doFilter(AuthenticationFilter.java:105)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.scholar.ui.external.filter.VerisignTransactionRecordingFilter.doFilter(VerisignTransactionRecordingFilter.java:120)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.common.ui.common.filter.HibernateSessionFilter.doFilter(HibernateSessionFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.myfaces.webapp.filter.ExtensionsFilter.doFilter(ExtensionsFilter.java:357)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.jmu.common.ui.common.filter.CharsetFilter.doFilter(CharsetFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.ConcurrentUsageFilter.doFilter(ConcurrentUsageFilter.java:54)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.PerformanceMonitoringFilter.doFilter(PerformanceMonitoringFilter.java:85)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at net.admin4j.ui.filters.ErrorNotificationFilter.doFilter(ErrorNotificationFilter.java:145)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:611)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.josso.tc60.agent.SSOAgentValve.invoke(SSOAgentValve.java:681)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <70b56bb6> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <11a4745c> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-16" - Thread t@54
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <5c33a153> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <1bd55b11> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-13" - Thread t@52
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-15" - Thread t@51
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-10" - Thread t@48
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <240f8f8> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <76966aed> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-9" - Thread t@47
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <3657f5c1> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <3745bf47> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"Admin4J-TaskTimerCleanupTask" - Thread t@45
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:117)
+	- locked <af87c3a> (a java.io.OutputStreamWriter)
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:135)
+	at java.io.OutputStreamWriter.write(OutputStreamWriter.java:220)
+	at java.io.Writer.write(Writer.java:157)
+	at java.beans.XMLEncoder.writeln(XMLEncoder.java:589)
+	at java.beans.XMLEncoder.outputXML(XMLEncoder.java:783)
+	at java.beans.XMLEncoder.outputStatement(XMLEncoder.java:772)
+	at java.beans.XMLEncoder.outputXML(XMLEncoder.java:792)
+	at java.beans.XMLEncoder.outputStatement(XMLEncoder.java:772)
+	at java.beans.XMLEncoder.outputValue(XMLEncoder.java:659)
+	at java.beans.XMLEncoder.flush(XMLEncoder.java:482)
+	at java.beans.XMLEncoder.close(XMLEncoder.java:530)
+	at net.admin4j.dao.xml.TaskTimerDAOXml.saveAll(TaskTimerDAOXml.java:106)
+	- locked <1ab762f> (a java.lang.Object)
+	at net.admin4j.timer.TaskTimerCleanupTask.run(TaskTimerCleanupTask.java:39)
+	at net.admin4j.util.Daemon.run(Daemon.java:81)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-7" - Thread t@43
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-5" - Thread t@40
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:516)
+	at org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:501)
+	at org.apache.coyote.http11.Http11Processor.setRequestLineReadTimeout(Http11Processor.java:173)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:929)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	- locked <46863b80> (a org.apache.tomcat.util.net.SocketWrapper)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- locked <79499386> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"http-bio-10.13.0.222-30105-exec-2" - Thread t@37
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-exec-1" - Thread t@36
+   java.lang.Thread.State: WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for <18eb170f> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:104)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-AsyncTimeout" - Thread t@35
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.tomcat.util.net.JIoEndpoint$AsyncTimeout.run(JIoEndpoint.java:148)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"http-bio-10.13.0.222-30105-Acceptor-0" - Thread t@34
+   java.lang.Thread.State: RUNNABLE
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:198)
+	- locked <5c5d9f80> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.acceptSocket(DefaultServerSocketFactory.java:60)
+	at org.apache.tomcat.util.net.JIoEndpoint$Acceptor.run(JIoEndpoint.java:216)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"ContainerBackgroundProcessor[StandardEngine[Catalina]]" - Thread t@33
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1508)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"ExpiringCacheCleanupDaemon" - Thread t@32
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at com.jmu.common.util.ExpiringCacheCleanupDaemon.run(ExpiringCacheCleanupDaemon.java:67)
+
+   Locked ownable synchronizers:
+	- None
+
+"Timer-1" - Thread t@31
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <692bbe0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+   Locked ownable synchronizers:
+	- None
+
+"QuartzScheduler_QuartzSchedulerThread" - Thread t@30
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <b6c727f> (a java.lang.Object)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:411)
+
+   Locked ownable synchronizers:
+	- None
+
+"QuartzScheduler_Worker-2" - Thread t@29
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <7cd0f5b4> (a org.quartz.simpl.SimpleThreadPool$WorkerThread)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:543)
+
+   Locked ownable synchronizers:
+	- None
+
+"QuartzScheduler_Worker-1" - Thread t@28
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <7ab33c70> (a org.quartz.simpl.SimpleThreadPool$WorkerThread)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:543)
+
+   Locked ownable synchronizers:
+	- None
+
+"Admin4j Concurrent Usage Detector" - Thread t@27
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.admin4j.util.Daemon.run(Daemon.java:80)
+
+   Locked ownable synchronizers:
+	- None
+
+"Admin4j Low Memory Detector" - Thread t@26
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.admin4j.util.Daemon.run(Daemon.java:80)
+
+   Locked ownable synchronizers:
+	- None
+
+"Admin4J-ExceptionTrackerCleanupTask" - Thread t@24
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.admin4j.util.Daemon.run(Daemon.java:80)
+
+   Locked ownable synchronizers:
+	- None
+
+"Admin4J-Expiring-Cache-Cleanup" - Thread t@23
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.admin4j.util.Daemon.run(Daemon.java:80)
+
+   Locked ownable synchronizers:
+	- None
+
+"Admin4J-ExecutionTrackingTask" - Thread t@22
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.admin4j.util.Daemon.run(Daemon.java:80)
+
+   Locked ownable synchronizers:
+	- None
+
+"Admin4j Blocked Thread Detector" - Thread t@21
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.admin4j.util.Daemon.run(Daemon.java:80)
+
+   Locked ownable synchronizers:
+	- None
+
+"Timer-0" - Thread t@19
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <34310927> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+   Locked ownable synchronizers:
+	- None
+
+"QuartzScheduler_QuartzSchedulerThread" - Thread t@18
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <7f4ffa35> (a java.lang.Object)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:411)
+
+   Locked ownable synchronizers:
+	- None
+
+"QuartzScheduler_Worker-2" - Thread t@17
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <5bb3eedf> (a org.quartz.simpl.SimpleThreadPool$WorkerThread)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:543)
+
+   Locked ownable synchronizers:
+	- None
+
+"QuartzScheduler_Worker-1" - Thread t@16
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <207a182> (a org.quartz.simpl.SimpleThreadPool$WorkerThread)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:543)
+
+   Locked ownable synchronizers:
+	- None
+
+"ExpiringCacheCleanupDaemon" - Thread t@15
+   java.lang.Thread.State: TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at com.jmu.common.util.ExpiringCacheCleanupDaemon.run(ExpiringCacheCleanupDaemon.java:67)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-0" - Thread t@12
+   java.lang.Thread.State: RUNNABLE
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:198)
+	- locked <56aaeb7e> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:52)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:388)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:360)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-30305" - Thread t@11
+   java.lang.Thread.State: RUNNABLE
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:198)
+	- locked <6f4ac9a5> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:388)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:360)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Accept-0" - Thread t@10
+   java.lang.Thread.State: RUNNABLE
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:198)
+	- locked <16fca8b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:388)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:360)
+	at java.lang.Thread.run(Thread.java:724)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" - Thread t@5
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" - Thread t@4
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" - Thread t@3
+   java.lang.Thread.State: WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <25a8d3d2> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:189)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" - Thread t@2
+   java.lang.Thread.State: WAITING
+	at java.lang.Object.wait(Native Method)
+	- waiting on <6eea934e> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:503)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+
+   Locked ownable synchronizers:
+	- None
+
+"main" - Thread t@1
+   java.lang.Thread.State: RUNNABLE
+	at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:198)
+	- locked <605cbf> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+	at java.net.ServerSocket.accept(ServerSocket.java:498)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:452)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:779)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:725)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:322)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:456)
+
+   Locked ownable synchronizers:
+	- None
+
