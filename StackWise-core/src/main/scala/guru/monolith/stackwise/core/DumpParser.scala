@@ -24,6 +24,7 @@ class DumpParser {
     val lineList:Array[String] = StringUtils.split(cleanedDump, "\n");
     
     var currentThreadStack : ThreadStack = null 
+    var lastExecutionPoint : ExecutionPoint = null
     for (line <- lineList) {
       val word : Array[String] = StringUtils.split(line)
       val lineType = findLineType(line)
@@ -36,7 +37,19 @@ class DumpParser {
           currentThreadStack = currentThreadStack.copy(state=parseThreadStackState(word))
         }
         case LineType.ExecutionPoint => {
-          currentThreadStack.executionPointList.add(parseExecutionPoint(line))
+          lastExecutionPoint = parseExecutionPoint(line)
+          currentThreadStack.executionPointList.add(lastExecutionPoint)
+        }
+        case LineType.Lock => {
+          val lockedResource = parseLockedResource(line)
+          if (lastExecutionPoint != null) {
+            lastExecutionPoint.lockedResourceList.add(lockedResource)
+          } else {
+            currentThreadStack.lockedSunchronizerList.add(lockedResource)
+          }
+        }
+        case LineType.LockSynchronizer => {
+          lastExecutionPoint = null
         }
         case _ => {}
       }
@@ -44,6 +57,13 @@ class DumpParser {
     threadList.add(currentThreadStack)
     
     return threadList
+  }
+  
+  private def parseLockedResource(line:String) : LockedResource = {
+    val monitorLockName = line.substring(line.indexOf("<") + 1, line.indexOf(">"))
+    val lockedClassName = line.substring(line.indexOf("(") + 3, line.indexOf(")"))
+    
+    return new LockedResource(monitorLockName, lockedClassName)
   }
   
   private def parseExecutionPoint(line:String) : ExecutionPoint = {
@@ -95,7 +115,7 @@ class DumpParser {
     if ("at".equals(word(0))) return LineType.ExecutionPoint
     if ("java.lang.Thread.State:".equals(word(0))) return LineType.ThreadState
     if ("Locked".equals(word(0))) return LineType.LockSynchronizer
-    if ("-".equals(word(0))) return LineType.Lock
+    if ("-".equals(word(0)) && !"None".equalsIgnoreCase(word(1))) return LineType.Lock
     
     return LineType.WhiteSpace
   }

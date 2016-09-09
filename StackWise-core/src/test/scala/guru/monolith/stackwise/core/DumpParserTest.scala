@@ -48,6 +48,10 @@ class DumpParserTest {
     Assert.assertEquals(Thread.State.RUNNABLE, stack1.get(0).state)
     Assert.assertEquals(Thread.State.WAITING, stack2.get(0).state)
     Assert.assertEquals(Thread.State.TIMED_WAITING, stack3.get(0).state)
+    
+    Assert.assertEquals(1, stack1.get(0).lockedSunchronizerList.size())
+    Assert.assertEquals("6756a33c", stack1.get(0).lockedSunchronizerList.get(0).monitorLockName)
+    Assert.assertEquals("java.util.concurrent.ThreadPoolExecutor$Worker", stack1.get(0).lockedSunchronizerList.get(0).lockedClassName)
   }
   
   @Test 
@@ -55,6 +59,19 @@ class DumpParserTest {
     Assert.assertEquals(12, stack1.get(0).executionPointList.size())
     Assert.assertEquals(9, stack2.get(0).executionPointList.size())
     Assert.assertEquals(25, stack3.get(0).executionPointList.size())
+    
+    Assert.assertEquals("java.net.SocketInputStream", stack1.get(0).executionPointList.get(0).className)
+    Assert.assertEquals("socketRead0", stack1.get(0).executionPointList.get(0).methodName)
+    Assert.assertEquals("Native Method", stack1.get(0).executionPointList.get(0).sourceFileName)
+    
+    Assert.assertEquals("java.net.SocketInputStream", stack1.get(0).executionPointList.get(1).className)
+    Assert.assertEquals("read", stack1.get(0).executionPointList.get(1).methodName)
+    Assert.assertEquals("SocketInputStream.java", stack1.get(0).executionPointList.get(1).sourceFileName)
+    Assert.assertEquals(152, stack1.get(0).executionPointList.get(1).lineNbr)
+    
+    Assert.assertEquals(1, stack1.get(0).executionPointList.get(4).lockedResourceList.size())
+    Assert.assertEquals("584982c0", stack1.get(0).executionPointList.get(4).lockedResourceList.get(0).monitorLockName)
+    Assert.assertEquals("java.io.BufferedInputStream", stack1.get(0).executionPointList.get(4).lockedResourceList.get(0).lockedClassName)
   }
   
 }
