@@ -7,6 +7,6 @@
   <name>StackWise</name>
   <description>StackWise</description>
   <modules>
-  	<module>StackWise-grammar</module>
+  	<module>StackWise-core</module>
   </modules>
 </project>
