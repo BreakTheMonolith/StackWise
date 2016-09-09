@@ -72,6 +72,9 @@ class DumpParserTest {
     Assert.assertEquals(1, stack1.get(0).executionPointList.get(4).lockedResourceList.size())
     Assert.assertEquals("584982c0", stack1.get(0).executionPointList.get(4).lockedResourceList.get(0).monitorLockName)
     Assert.assertEquals("java.io.BufferedInputStream", stack1.get(0).executionPointList.get(4).lockedResourceList.get(0).lockedClassName)
+    
+    Assert.assertEquals("6eea934e", stack1.get(64).executionPointList.get(0).blockedOn.monitorLockName)
+    Assert.assertEquals("java.lang.ref.Reference$Lock", stack1.get(64).executionPointList.get(0).blockedOn.lockedClassName)
   }
   
 }

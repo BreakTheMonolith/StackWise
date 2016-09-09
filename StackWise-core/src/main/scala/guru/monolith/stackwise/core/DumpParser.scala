@@ -7,7 +7,7 @@ import org.apache.commons.lang3.EnumUtils
 import Array._
 
 object LineType extends Enumeration {
-  val Thread, Lock, ExecutionPoint, WhiteSpace, ThreadState, LockSynchronizer = Value
+  val Thread, Lock, ExecutionPoint, WhiteSpace, ThreadState, LockSynchronizer, WaitLock = Value
 }
 
 class DumpParser {
@@ -51,6 +51,12 @@ class DumpParser {
         case LineType.LockSynchronizer => {
           lastExecutionPoint = null
         }
+        case LineType.WaitLock => {
+          val lockedResource = parseLockedResource(line)
+           lastExecutionPoint = lastExecutionPoint.copy(blockedOn=lockedResource)
+           currentThreadStack.executionPointList.remove(currentThreadStack.executionPointList.size() - 1)
+           currentThreadStack.executionPointList.add(lastExecutionPoint)
+        }
         case _ => {}
       }
     }
@@ -83,7 +89,7 @@ class DumpParser {
       sourceFile = sourceText
     }
     
-    return new ExecutionPoint(className, methodName, sourceFile, sourceFileLine, new ArrayList[LockedResource])
+    return new ExecutionPoint(className, methodName, sourceFile, sourceFileLine, null, new ArrayList[LockedResource])
   }
   
   private def parseThreadStack(line:String) : ThreadStack = {
@@ -115,7 +121,8 @@ class DumpParser {
     if ("at".equals(word(0))) return LineType.ExecutionPoint
     if ("java.lang.Thread.State:".equals(word(0))) return LineType.ThreadState
     if ("Locked".equals(word(0))) return LineType.LockSynchronizer
-    if ("-".equals(word(0)) && !"None".equalsIgnoreCase(word(1))) return LineType.Lock
+    if ("-".equals(word(0)) && !"None".equalsIgnoreCase(word(1)) && !"waiting".equalsIgnoreCase(word(1))) return LineType.Lock
+    if ("-".equals(word(0)) && "waiting".equalsIgnoreCase(word(1))) return LineType.WaitLock
     
     return LineType.WhiteSpace
   }
