@@ -1,16 +1,18 @@
 package guru.monolith.stackwise.core
 
-import java.util.List
-import java.util.ArrayList
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.lang3.EnumUtils
 import Array._
+import scala.collection.mutable.Buffer
+import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.ListBuffer
+import java.util.ArrayList
 
 object LineType extends Enumeration {
   val Thread, Lock, ExecutionPoint, WhiteSpace, ThreadState, LockSynchronizer, WaitLock = Value
 }
 
-class DumpParser {
+object DumpParser {
   val stateList = Array(Thread.State.NEW.toString()
       , Thread.State.RUNNABLE.toString()
       , Thread.State.BLOCKED.toString()
@@ -18,8 +20,8 @@ class DumpParser {
       , Thread.State.TIMED_WAITING.toString()
       , Thread.State.TERMINATED.toString())
   
-  def parse(threadDump: String) : List[ThreadStack] = {
-    val threadList : List[ThreadStack]  = new ArrayList[ThreadStack]
+  def parse(threadDump: String) : Seq[ThreadStack] = {
+    val threadList : Buffer[ThreadStack] = new ListBuffer[ThreadStack]
     val cleanedDump = StringUtils.remove(StringUtils.remove(threadDump, "\r"), "\t")
     val lineList:Array[String] = StringUtils.split(cleanedDump, "\n");
     
@@ -30,7 +32,7 @@ class DumpParser {
       val lineType = findLineType(line)
       lineType match {
         case LineType.Thread => {
-          if (currentThreadStack != null) threadList.add(currentThreadStack)
+          if (currentThreadStack != null) threadList+=currentThreadStack
           currentThreadStack = parseThreadStack(line)
         }
         case LineType.ThreadState => {
@@ -60,7 +62,7 @@ class DumpParser {
         case _ => {}
       }
     }
-    threadList.add(currentThreadStack)
+    threadList+=currentThreadStack
     
     return threadList
   }
@@ -94,10 +96,16 @@ class DumpParser {
   
   private def parseThreadStack(line:String) : ThreadStack = {
     val word : Array[String] = StringUtils.split(line)
-    val threadId = line.substring(1, line.indexOf('"', 2))
+    val threadName = line.substring(1, line.indexOf('"', 2))
+    val threadId = parseThreadId(word)
     
-    return new ThreadStack(threadId, parseThreadStackState(word), parseMonitorId(word(word.length - 1)), new ArrayList[ExecutionPoint], new ArrayList[LockedResource])
+    return new ThreadStack(threadId, threadName, parseThreadStackState(word), parseMonitorId(word(word.length - 1)), new ArrayList[ExecutionPoint], new ArrayList[LockedResource])
   } 
+  
+  private def parseThreadId(wordArray:Array[String]) : String = {
+    for (word <- wordArray) {if (word.startsWith("tid=")) return word.substring(4)}
+    return wordArray(wordArray.length - 1)
+  }
   
   private def parseThreadStackState(wordArray:Array[String]) : Thread.State = {
     for (word <- wordArray) {if (stateList.contains(word)) return Thread.State.valueOf(word)}
