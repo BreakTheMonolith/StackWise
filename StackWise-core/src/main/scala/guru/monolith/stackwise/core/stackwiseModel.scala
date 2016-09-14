@@ -5,3 +5,4 @@ import java.util.List;
 case class ThreadStack(id:String, name:String, state:Thread.State, monitorId: String, executionPointList:List[ExecutionPoint], lockedSunchronizerList:List[LockedResource])
 case class ExecutionPoint(className:String, methodName:String, sourceFileName:String, lineNbr:Integer, blockedOn: LockedResource, lockedResourceList:List[LockedResource])
 case class LockedResource(monitorLockName:String, lockedClassName:String)
+case class HotSpot(className:String, methodName:String, sourceFileName:String, nbrMentions:Int)

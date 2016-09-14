@@ -24,7 +24,20 @@ class StackWiseTest extends StackWiseTestBase {
     sw.reportBlockedThreads(outStream)
     Assert.assertTrue(outStream.toString().contains("blocking other threads from executing"))
     
-    sw = new StackWise(dump4)
-    sw.reportBlockedThreads(System.out)
+//    sw = new StackWise(dump4)
+//    sw.reportBlockedThreads(System.out)
+  }
+  
+  @Test
+  def testreportHotSpots {
+    var sw = new StackWise(dump4)
+    sw.reportHotSpots(System.out)
+    
+    sw.reportHotSpots(System.out, "com.jmu")
+  }
+  @Test
+  def testreportAll {
+    var sw = new StackWise(dump4)
+    sw.reportAll(System.out, "com.jmu")
   }
 }

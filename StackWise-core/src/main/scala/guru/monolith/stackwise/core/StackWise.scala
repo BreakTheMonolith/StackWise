@@ -4,6 +4,7 @@ import java.io.OutputStream
 import java.io.PrintStream
 
 import org.apache.commons.lang3.StringUtils
+import org.apache.commons.lang3.SystemUtils
 
 class StackWise(dumpFile: String) {
   require(StringUtils.isNotEmpty(dumpFile), "Null or empty dumpFile not allowed")
@@ -12,8 +13,14 @@ class StackWise(dumpFile: String) {
   val lockedOwnershipMap = StackWiseUtils.findLockOwnership(stackList)
   val blockingThreads = StackWiseUtils.findBlockingThreads(stackList)
   val blockedThreadsUnknownBlocker = StackWiseUtils.findBlockerUnknownThreads(stackList)
+  
+  def reportAll(outStream: OutputStream, packageQualifier: String = "") {
+    reportBlockedThreads(outStream, packageQualifier)
+    outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
+    reportHotSpots(outStream, packageQualifier)
+  }
 
-  def reportBlockedThreads(outStream: OutputStream) {
+  def reportBlockedThreads(outStream: OutputStream, packageQualifier: String = "") {
     val blockedThreads = StackWiseUtils.findThreads(stackList, Array(Thread.State.BLOCKED))
 
     val printStream = new PrintStream(outStream)
@@ -24,18 +31,26 @@ class StackWise(dumpFile: String) {
     
     if (blockingThreads.length > 0) {
       printStream.println("The following threads are blocking other threads from executing.")
-      blockingThreads.foreach { stack => printStream.println(stack) }
+      printStream.println()
+      blockingThreads.foreach { stack => printStream.println(StackWiseUtils.formatStack(stack, packageQualifier)) }
     }
     
     if (blockedThreadsUnknownBlocker.size > 0) {
       printStream.println("The following threads are blocked, but blockers weren't reported.")
-      blockedThreadsUnknownBlocker.foreach { stack => printStream.println(stack) }
+      printStream.println()
+      blockedThreadsUnknownBlocker.foreach { stack => printStream.println(StackWiseUtils.formatStack(stack, packageQualifier)) }
     }
 
   }
 
-  def reportHotSpots(outStream: OutputStream) {
-
+  def reportHotSpots(outStream: OutputStream, packageQualifier: String = "") {
+    val hotSpots = StackWiseUtils.findClassMethodUsage(stackList, packageQualifier)
+    val hotSpotsSorted = hotSpots.sortBy { spot => spot.nbrMentions }.reverse
+    val printStream = new PrintStream(outStream)
+    
+    printStream.println("Hot Spot Listing.")
+    printStream.println()
+    hotSpotsSorted.take(20).foreach { spot => printStream.println(StackWiseUtils.formatHotSpot(spot)) }
   }
 
 }
