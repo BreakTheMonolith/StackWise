@@ -33,6 +33,18 @@ object StackWiseUtils {
 
     return blockedList
   }
+  
+  def findDesiredLockOwnership(mainStackList: Seq[ThreadStack]): Map[String, String] = {
+    val lockOwnershipMap = HashMap.empty[String, String]
+    val blockedThreadList = findThreads(mainStackList, Array(Thread.State.BLOCKED))
+    blockedThreadList.foreach { stack =>
+      waitingResourceSeq(stack.executionPointList).foreach { lock => 
+        lockOwnershipMap.put(lock.monitorLockName, stack.id) 
+      }
+    }
+    
+    return lockOwnershipMap.toMap
+  }
 
   def findBlockingThreads(mainStackList: Seq[ThreadStack]): Seq[ThreadStack] = {
     val blockedThreadList = findThreads(mainStackList, Array(Thread.State.BLOCKED))
@@ -87,6 +99,16 @@ object StackWiseUtils {
     pointList.foreach { point => lockList ++= point.lockedResourceList }
     return lockList
   }
+  
+  def waitingResourceSeq(pointList: Seq[ExecutionPoint]): Seq[LockedResource] = {
+    val lockList = new ListBuffer[LockedResource]
+    pointList.foreach { point => 
+      if (point.blockedOn != null) {
+        lockList += point.blockedOn 
+      }
+    }
+    return lockList
+  }
 
   def findClassMethodUsage(mainStackList: Seq[ThreadStack], packageQualifier: String = ""): Seq[HotSpot] = {
     val hotSpotMap = HashMap.empty[String, HotSpot]
@@ -116,10 +138,11 @@ object StackWiseUtils {
     return hotSpot.nbrMentions + " - " + hotSpot.className + "." + hotSpot.methodName + "() [" + hotSpot.sourceFileName + "]"
   }
 
-  def formatStack(stack: ThreadStack, packageQualifier: String = ""): String = {
-    val builder = new StringBuilder(String.format("\"%s\" - state=%s tid=%s%s", stack.name, stack.state, stack.id, SystemUtils.LINE_SEPARATOR))
+  def formatStack(stack: ThreadStack, packageQualifier: String = "", messages:Array[String] = Array()): String = {
+    val builder = new StringBuilder(String.format("\"%s\" - state=%s tid=%s", stack.name, stack.state, stack.id))
     var isFirst: Boolean = true
     var lastPointOmitted: Boolean = false
+    messages.foreach { message => builder.append(SystemUtils.LINE_SEPARATOR + message ) }
 
     stack.executionPointList.foreach { point =>
       if (isFirst) {

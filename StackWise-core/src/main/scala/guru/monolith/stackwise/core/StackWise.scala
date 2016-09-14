@@ -3,14 +3,18 @@ package guru.monolith.stackwise.core
 import java.io.OutputStream
 import java.io.PrintStream
 
+import scala.collection.JavaConversions._
+
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.lang3.SystemUtils
+import scala.collection.mutable.ArrayBuffer
 
 class StackWise(dumpFile: String) {
   require(StringUtils.isNotEmpty(dumpFile), "Null or empty dumpFile not allowed")
   val stackList = DumpParser.parse(dumpFile)
   val idThreadMap = StackWiseUtils.mapThreadsById(stackList)
   val lockedOwnershipMap = StackWiseUtils.findLockOwnership(stackList)
+  val desiredLockOwnershipMap = StackWiseUtils.findDesiredLockOwnership(stackList)
   val blockingThreads = StackWiseUtils.findBlockingThreads(stackList)
   val blockedThreadsUnknownBlocker = StackWiseUtils.findBlockerUnknownThreads(stackList)
   
@@ -32,7 +36,17 @@ class StackWise(dumpFile: String) {
     if (blockingThreads.length > 0) {
       printStream.println("The following threads are blocking other threads from executing.")
       printStream.println()
-      blockingThreads.foreach { stack => printStream.println(StackWiseUtils.formatStack(stack, packageQualifier)) }
+      blockingThreads.foreach { stack => {
+        val lockedResourceSet = StackWiseUtils.lockResourceSeq(stack.executionPointList)
+        val messageBuffer = new ArrayBuffer[String]
+        lockedResourceSet.foreach { lock => 
+          if (desiredLockOwnershipMap.contains(lock.monitorLockName)) {
+            messageBuffer.+=(String.format("   Other threads waiting to lock resource <%s>, (a %s)", lock.monitorLockName, lock.lockedClassName))
+          }
+        }
+        printStream.println(StackWiseUtils.formatStack(stack, packageQualifier, messageBuffer.toArray)) 
+        }
+      }
     }
     
     if (blockedThreadsUnknownBlocker.size > 0) {
