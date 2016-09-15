@@ -15,12 +15,21 @@ import org.apache.commons.lang3.SystemUtils
 
 object StackWiseApplication {
   val commandLineOptions: Options = new Options
-  commandLineOptions.addOption("f", true, "input dump file (stdin works as well)")
-  commandLineOptions.addOption("o", true, "output file (stdout is the default)")
-  commandLineOptions.addOption("p", true, "package qualifier (used to abbreviate verbose output)")
 
   def main(args: Array[String]) {
+    
+    commandLineOptions.addOption("f", true, "input dump file (stdin works as well)")
+    commandLineOptions.addOption("o", true, "output file (stdout is the default)")
+    commandLineOptions.addOption("p", true, "package qualifier (used to abbreviate verbose output)")
+    commandLineOptions.addOption("h", false, "help")
+    
     val commandLine: CommandLine = new DefaultParser().parse(commandLineOptions, args)
+    
+    //
+    if (commandLine.hasOption("h")) {
+      printHelp()
+      return
+    }
     
     // output spec
     var outStream : OutputStream = null

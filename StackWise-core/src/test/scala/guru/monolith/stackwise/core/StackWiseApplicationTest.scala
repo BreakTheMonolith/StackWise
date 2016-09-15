@@ -43,4 +43,9 @@ class StackWiseApplicationTest extends StackWiseTestBase {
     Assert.assertTrue(outputContent.contains("21 - com.jmu.common.ui.common.filter.CharsetFilter.doFilter() [CharsetFilter.java]"))
   }
   
+  @Test
+  def testHelp() {
+    StackWiseApplication.main(Array("-h"))
+  }
+  
 }
