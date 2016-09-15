@@ -6,6 +6,10 @@ StackWise seeks to save you some analytical time.
 
 If you have trouble or have ideas on how to improve this product.  Please file an [issue](https://github.com/BreakTheMonolith/StackWise/issues).
 
+Things StackWise looks for:
+- Threads blocking other threads (synchronization issues)
+- Hot Spots (methods in your application most mentioned in running threads)
+
 ## System Requirements
 - Java 8
 
