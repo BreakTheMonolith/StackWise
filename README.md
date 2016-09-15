@@ -4,6 +4,8 @@ are a wonderful source of information useful in performance tuning and diagnosin
 syncronization issues. Unfortunately, they are verbose and labor intensive to analyze.
 StackWise seeks to save you some analytical time.
 
+If you have trouble or have ideas on how to improve this product.  Please file an [issue](https://github.com/BreakTheMonolith/StackWise/issues).
+
 ## System Requirements
 - Java 8
 
