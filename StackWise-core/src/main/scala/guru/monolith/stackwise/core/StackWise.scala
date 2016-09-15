@@ -22,6 +22,10 @@ class StackWise(dumpFile: String) {
     reportBlockedThreads(outStream, packageQualifier)
     outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
     reportHotSpots(outStream, packageQualifier)
+    
+    outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
+    outStream.write(String.format("Produced by StackWise (https://github.com/BreakTheMonolith/StackWise)%s", SystemUtils.LINE_SEPARATOR).getBytes)
+    outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
   }
 
   def reportBlockedThreads(outStream: OutputStream, packageQualifier: String = "") {

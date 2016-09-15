@@ -7,6 +7,12 @@ import org.junit.Before
 
 trait StackWiseTestBase {
   
+  val dumpFileName1 = "src/test/dumps/Thread-dump-1.txt"
+  val dumpFileName2 = "src/test/dumps/Thread-dump-2.txt"
+  val dumpFileName3 = "src/test/dumps/Thread-dump-3.txt"
+  val dumpFileName4 = "src/test/dumps/Thread-dump-4.txt"
+  val dumpFileName5 = "src/test/dumps/Thread-dump-5.txt"
+  
   var dump1:String = _
   var dump2:String = _
   var dump3:String = _
@@ -21,11 +27,11 @@ trait StackWiseTestBase {
   
   @Before 
   def initialize {
-    dump1 = FileUtils.readFileToString(new File("src/test/dumps/Thread-dump-1.txt"), "UTF-8");
-    dump2 = FileUtils.readFileToString(new File("src/test/dumps/Thread-dump-2.txt"), "UTF-8");
-    dump3 = FileUtils.readFileToString(new File("src/test/dumps/Thread-dump-3.txt"), "UTF-8");
-    dump4 = FileUtils.readFileToString(new File("src/test/dumps/Thread-dump-4.txt"), "UTF-8");
-    dump5 = FileUtils.readFileToString(new File("src/test/dumps/Thread-dump-5.txt"), "UTF-8");
+    dump1 = FileUtils.readFileToString(new File(dumpFileName1), "UTF-8");
+    dump2 = FileUtils.readFileToString(new File(dumpFileName2), "UTF-8");
+    dump3 = FileUtils.readFileToString(new File(dumpFileName3), "UTF-8");
+    dump4 = FileUtils.readFileToString(new File(dumpFileName4), "UTF-8");
+    dump5 = FileUtils.readFileToString(new File(dumpFileName5), "UTF-8");
     
     stack1 = DumpParser.parse(dump1)
     stack2 = DumpParser.parse(dump2)
