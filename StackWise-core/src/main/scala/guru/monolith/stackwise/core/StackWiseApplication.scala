@@ -35,7 +35,8 @@ object StackWiseApplication {
     var outStream : OutputStream = null
     if (commandLine.hasOption("o")) {
       val file = new File(commandLine.getOptionValue("o"))
-      if (file.isDirectory() || !file.getParentFile.canWrite() )  {
+      file.createNewFile()
+      if (file.isDirectory() || !file.canWrite() )  {
         printHelp(String.format("input file must be writable and can't be a directory.  file=%s", file.getAbsolutePath))
         return
       }
