@@ -25,7 +25,7 @@ object StackWiseApplication {
     
     val commandLine: CommandLine = new DefaultParser().parse(commandLineOptions, args)
     
-    //
+    //Help listing
     if (commandLine.hasOption("h")) {
       printHelp()
       return
@@ -35,11 +35,13 @@ object StackWiseApplication {
     var outStream : OutputStream = null
     if (commandLine.hasOption("o")) {
       val file = new File(commandLine.getOptionValue("o"))
-      if (file.isDirectory() || !file.canWrite() )  {
-        printHelp(String.format("input file must be writable and can't be a directory.  file=%s", commandLine.getOptionValue("o")))
+      if (file.isDirectory() || !file.getParentFile.canWrite() )  {
+        printHelp(String.format("input file must be writable and can't be a directory.  file=%s", file.getAbsolutePath))
         return
       }
       outStream = new FileOutputStream(file)
+    } else {
+      outStream = System.out
     }
 
     // Dump input spec

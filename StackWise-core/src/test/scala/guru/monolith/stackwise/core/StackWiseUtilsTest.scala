@@ -40,12 +40,12 @@ class StackWiseUtilsTest extends StackWiseTestBase {
   }
   
    @Test
-  def findBlockerUnknownThreads {
+  def testfindBlockerUnknownThreads {
     val strandedBlockersList = StackWiseUtils.findBlockerUnknownThreads(stack2)
     Assert.assertEquals(23, strandedBlockersList.size)
     
     val strandedBlockersList4 = StackWiseUtils.findBlockerUnknownThreads(stack4)
     Assert.assertEquals(0, strandedBlockersList4.size)
   }
-  
+   
 }
