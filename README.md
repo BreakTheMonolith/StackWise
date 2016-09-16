@@ -8,6 +8,7 @@ If you have trouble or have ideas on how to improve this product.  Please file a
 
 Things StackWise looks for:
 - Threads blocking other threads (synchronization issues)
+- IO Bound Application Threads
 - Hot Spots (methods in your application most mentioned in running threads)
 
 ## System Requirements
@@ -38,6 +39,11 @@ usage: StackWise
 ## Sample Output
 ```  
 Package Qualifier=com.jmu  Classes from other packages may be omitted for brevity.
+
+Thread Summary:
+   There are 59 running threads.
+   Out of those, 25 appear to be application related.
+   Out of those, 0 appear to be IO bound.
 
 The following threads are blocking other threads from executing.
 

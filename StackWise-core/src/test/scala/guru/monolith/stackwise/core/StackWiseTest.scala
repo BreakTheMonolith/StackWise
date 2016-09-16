@@ -39,5 +39,10 @@ class StackWiseTest extends StackWiseTestBase {
   def testreportAll {
     var sw = new StackWise(dump4)
     sw.reportAll(System.out, "com.jmu")
+    
+    System.out.println("------------------------------------------")
+    
+    sw = new StackWise(dump1)
+    sw.reportAll(System.out, "com.jmu")
   }
 }

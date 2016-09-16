@@ -33,7 +33,7 @@ class StackWiseApplicationTest extends StackWiseTestBase {
     StackWiseApplication.main(Array("-o", tempOutFile.getAbsolutePath, "-p", "com.jmu", "-f", dumpFileName4))
     val outputContent = FileUtils.readFileToString(tempOutFile, "UTF-8")
     
-    //System.out.println(outputContent)
+    System.out.println(outputContent)
     Assert.assertTrue(outputContent.contains("com.jmu"))
     Assert.assertTrue(outputContent.contains("http-bio-10.13.0.222-30105-exec-289"))
     Assert.assertTrue(outputContent.contains("state=RUNNABLE tid=0x000000001bf06000"))

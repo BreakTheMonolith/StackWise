@@ -15,6 +15,39 @@ object StackWiseUtils {
 
     return filteredList
   }
+  
+  def findThreadsInSpecificClasses(mainStackList: Seq[ThreadStack], partialClassNames: Array[String]): Seq[ThreadStack] = {
+    val filteredList = new ListBuffer[ThreadStack]
+    for (stack <- mainStackList) {
+      if (stack.executionPointList.size > 0 
+          && startswithPhraseInArray(stack.executionPointList.get(0).className, true, partialClassNames) ) filteredList += stack
+    }
+    return filteredList
+  }
+  
+  def findThreadsReferencingSpecificClasses(mainStackList: Seq[ThreadStack], partialClassNames: Array[String]): Seq[ThreadStack] = {
+    val filteredList = new ListBuffer[ThreadStack]
+    var addedToStack = false
+    
+    for (stack <- mainStackList) {
+      addedToStack = false
+      for (point <- stack.executionPointList) {
+        if (!addedToStack && startswithPhraseInArray(point.className, true, partialClassNames)) {
+          filteredList += stack
+          addedToStack = true
+        }
+      }
+    }
+    return filteredList
+  }
+  
+  private def startswithPhraseInArray(label:String, startsWith:Boolean, startsWithOptions: Array[String]):Boolean = {
+    for (phrase <- startsWithOptions) {
+      if (startsWith && label.startsWith(phrase))  return true
+      else if (!startsWith && label.contains(phrase))  return true
+    }
+    return false
+  }
 
   def findBlockerUnknownThreads(mainStackList: Seq[ThreadStack]): Seq[ThreadStack] = {
     val blockedThreadList = findThreads(mainStackList, Array(Thread.State.BLOCKED))

@@ -12,6 +12,9 @@ import scala.collection.mutable.ArrayBuffer
 class StackWise(dumpFile: String) {
   require(StringUtils.isNotEmpty(dumpFile), "Null or empty dumpFile not allowed")
   val stackList = DumpParser.parse(dumpFile)
+  val blockedThreads = StackWiseUtils.findThreads(stackList, Array(Thread.State.BLOCKED))
+  val runnableThreads = StackWiseUtils.findThreads(stackList, Array(Thread.State.RUNNABLE))  
+  
   val idThreadMap = StackWiseUtils.mapThreadsById(stackList)
   val lockedOwnershipMap = StackWiseUtils.findLockOwnership(stackList)
   val desiredLockOwnershipMap = StackWiseUtils.findDesiredLockOwnership(stackList)
@@ -19,6 +22,8 @@ class StackWise(dumpFile: String) {
   val blockedThreadsUnknownBlocker = StackWiseUtils.findBlockerUnknownThreads(stackList)
   
   def reportAll(outStream: OutputStream, packageQualifier: String = "") {
+    reportThreadSummary(outStream, packageQualifier)
+    outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
     reportBlockedThreads(outStream, packageQualifier)
     outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
     reportHotSpots(outStream, packageQualifier)
@@ -27,9 +32,30 @@ class StackWise(dumpFile: String) {
     outStream.write(String.format("Produced by StackWise (https://github.com/BreakTheMonolith/StackWise)%s", SystemUtils.LINE_SEPARATOR).getBytes)
     outStream.write(SystemUtils.LINE_SEPARATOR.getBytes)
   }
+  
+  def reportThreadSummary(outStream: OutputStream, packageQualifier: String = "") {
+    val applicationThreads = StackWiseUtils.findThreadsReferencingSpecificClasses(runnableThreads, Array(packageQualifier))
+    val ioBoundThreads = StackWiseUtils.findThreadsInSpecificClasses(applicationThreads, Array("java.net", "java.io", "java.nio"))
+    
+    val printStream = new PrintStream(outStream)
+    val spacer = "   "
+    printStream.println("Thread Summary:")
+    printStream.println(String.format(spacer + "There are %s running threads.", runnableThreads.size.toString))
+    if (StringUtils.isNotEmpty(packageQualifier)) {
+      printStream.println(String.format(spacer + "Out of those, %s appear to be application related.", applicationThreads.size.toString))
+    }
+    printStream.println(String.format(spacer + "Out of those, %s appear to be IO bound.", ioBoundThreads.size.toString))
+    
+    if (ioBoundThreads.size == 0)  return
+    printStream.println()
+    printStream.println("The following threads appear to be IO bound.")
+    printStream.println()
+    
+    ioBoundThreads.foreach { stack => printStream.println(StackWiseUtils.formatStack(stack, packageQualifier))  }
+  }
 
   def reportBlockedThreads(outStream: OutputStream, packageQualifier: String = "") {
-    val blockedThreads = StackWiseUtils.findThreads(stackList, Array(Thread.State.BLOCKED))
+    
 
     val printStream = new PrintStream(outStream)
     if (blockedThreads.length == 0) {
