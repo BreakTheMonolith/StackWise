@@ -36,7 +36,7 @@ usage: StackWise
  -p <arg>   package qualifier (used to abbreviate verbose output)
 ```  
  
-## Sample Output
+## <a id="sample-output"></a>Sample Output
 ```  
 Package Qualifier=com.jmu  Classes from other packages may be omitted for brevity.
 
