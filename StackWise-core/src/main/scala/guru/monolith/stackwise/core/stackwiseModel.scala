@@ -16,3 +16,4 @@ case class ThreadStack(id:String, name:String, state:Thread.State, monitorId: St
 case class ExecutionPoint(className:String, methodName:String, sourceFileName:String, lineNbr:Integer, blockedOn: LockedResource, lockedResourceList:List[LockedResource])
 case class LockedResource(monitorLockName:String, lockedClassName:String)
 case class HotSpot(className:String, methodName:String, sourceFileName:String, nbrMentions:Int)
+case class BlockingResource(lockedResource:LockedResource, blockingThreadId:String, seekingThreadId:String)

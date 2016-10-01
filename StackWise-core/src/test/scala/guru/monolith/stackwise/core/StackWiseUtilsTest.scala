@@ -58,4 +58,10 @@ class StackWiseUtilsTest extends StackWiseTestBase {
     Assert.assertEquals(0, strandedBlockersList4.size)
   }
    
+   @Test
+   def testfindBlockingResources {
+     val blockingResourceList = StackWiseUtils.findBlockingResources(stackDeadlock)
+     Assert.assertEquals(2, blockingResourceList.size)
+   }
+   
 }

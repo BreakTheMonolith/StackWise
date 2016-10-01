@@ -29,6 +29,7 @@ class StackWise(dumpFile: String) {
   val lockedOwnershipMap = StackWiseUtils.findLockOwnership(stackList)
   val desiredLockOwnershipMap = StackWiseUtils.findDesiredLockOwnership(stackList)
   val blockingThreads = StackWiseUtils.findBlockingThreads(stackList)
+  val blockingResourceMap = StackWiseUtils.findBlockingResourceMap(stackList)
   val blockedThreadsUnknownBlocker = StackWiseUtils.findBlockerUnknownThreads(stackList)
   
   def reportAll(outStream: OutputStream, packageQualifier: String = "") {
@@ -76,14 +77,13 @@ class StackWise(dumpFile: String) {
     if (blockingThreads.length > 0) {
       printStream.println("The following threads are blocking other threads from executing.")
       printStream.println()
-      blockingThreads.foreach { stack => {
-        val lockedResourceSet = StackWiseUtils.lockResourceSeq(stack.executionPointList)
+      blockingResourceMap.keys.foreach { stack => {
         val messageBuffer = new ArrayBuffer[String]
-        lockedResourceSet.foreach { lock => 
-          if (desiredLockOwnershipMap.contains(lock.monitorLockName)) {
-            messageBuffer.+=(String.format("   Other threads waiting to lock resource <%s>, (a %s)", lock.monitorLockName, lock.lockedClassName))
-          }
+        blockingResourceMap.get(stack).get.foreach { lock => 
+          messageBuffer.+=(String.format("   Other threads waiting to lock resource <%s>, (a %s)", 
+              lock.monitorLockName, lock.lockedClassName)) 
         }
+        
         printStream.println(StackWiseUtils.formatStack(stack, packageQualifier, messageBuffer.toArray)) 
         }
       }

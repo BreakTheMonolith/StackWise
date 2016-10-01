@@ -107,6 +107,41 @@ object StackWiseUtils {
 
     return blockingList
   }
+  
+  def findBlockingResourceMap(mainStackList: Seq[ThreadStack]): Map[ThreadStack,Seq[LockedResource]] = {
+    val blockingThreads = findBlockingThreads(mainStackList)
+    val desiredLockOwnershipMap = findDesiredLockOwnership(mainStackList)
+    val blockingResourceMap = HashMap.empty[ThreadStack, Seq[LockedResource]]
+    
+    blockingThreads.foreach { stack => {
+        val lockedResourceSet = lockResourceSeq(stack.executionPointList)
+        val blockingResourceList = new ListBuffer[LockedResource]
+        lockedResourceSet.foreach { lock => 
+          if (desiredLockOwnershipMap.contains(lock.monitorLockName)) {
+            blockingResourceList.+=:(lock)
+          }
+        }
+        blockingResourceMap.put(stack, blockingResourceList.toSeq)
+      }
+    }
+    
+    return blockingResourceMap.toMap
+  }
+  
+  def findBlockingResources(mainStackList: Seq[ThreadStack]): Seq[BlockingResource] = {
+    val blockingResourcesList = new ListBuffer[BlockingResource]
+    val blockedThreadResourceMap  = findBlockingResourceMap(mainStackList)
+    val itThreadMap = mapThreadsById(mainStackList)
+    val desiredLockOwnershipMap = findDesiredLockOwnership(mainStackList)
+    
+    blockedThreadResourceMap.foreach {case (threadStack, blockingResourceSeq) => 
+      blockingResourceSeq.foreach { blockingResource => 
+        blockingResourcesList += new BlockingResource(blockingResource, threadStack.id, desiredLockOwnershipMap.get(blockingResource.monitorLockName).get) 
+        }
+      }
+    
+    blockingResourcesList.toSeq
+  }
 
   def mapThreadsById(mainStackList: Seq[ThreadStack]): Map[String, ThreadStack] = {
     val stackNameMap = HashMap.empty[String, ThreadStack]

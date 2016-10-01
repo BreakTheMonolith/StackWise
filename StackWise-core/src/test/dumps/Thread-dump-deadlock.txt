@@ -1,0 +1,51 @@
+Full thread dump Java HotSpot(TM) Client VM (1.8.0 ...
+
+"DestroyJavaVM" prio=6 tid=0x00296000 nid=0x198 waiting on conditio...
+   java.lang.Thread.State: RUNNABLE
+
+"Thread-1" prio=6 tid=0x02a99c00 nid=0xee0 waiting for monitor entr...
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at SimpleDeadLock$Thread2.run(SimpleDeadLock.java:37)
+        - waiting to lock <0x229bd238> (a java.lang.Object)
+        - locked <0x229bd240> (a java.lang.Object)
+
+"Thread-0" prio=6 tid=0x02a99000 nid=0xefc waiting for monitor entr...
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at SimpleDeadLock$Thread1.run(SimpleDeadLock.java:24)
+        - waiting to lock <0x229bd240> (a java.lang.Object)
+        - locked <0x229bd238> (a java.lang.Object)
+
+"Low Memory Detector" daemon prio=6 tid=0x02a7c800 nid=0xd2c runnab...
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread0" daemon prio=10 tid=0x02a78000 nid=0x500 waiting o...
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" daemon prio=10 tid=0x02a76c00 nid=0x32c waiting o...
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=10 tid=0x02a75c00 nid=0x190 runnabl...
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=8 tid=0x02a6e000 nid=0xdb0 in Object.wait()...
+   java.lang.Thread.State: WAITING (on object monitor)
+   at java.lang.Object.wait(Native Method)
+   - waiting on <0x22990b38> (a java.lang.ref.ReferenceQueue$Lock)
+   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+   - locked <0x22990b38> (a java.lang.ref.ReferenceQueue$Lock)
+   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+   at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x02a6d000 nid=0xa44 in Obje...
+   java.lang.Thread.State: WAITING (on object monitor)
+   at java.lang.Object.wait(Native Method)
+   - waiting on <0x22990a38> (a java.lang.ref.Reference$Lock)
+   at java.lang.Object.wait(Object.java:485)
+   at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+   - locked <0x22990a38> (a java.lang.ref.Reference$Lock)
+
+"VM Thread" prio=10 tid=0x02a63c00 nid=0xe88 runnable
+
+"VM Periodic Task Thread" prio=10 tid=0x02a7e000 nid=0xf58 waiting ...
+
+JNI global references: 571

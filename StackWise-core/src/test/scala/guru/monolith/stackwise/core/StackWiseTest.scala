@@ -55,4 +55,10 @@ class StackWiseTest extends StackWiseTestBase {
     sw = new StackWise(dump1)
     sw.reportAll(System.out, "com.jmu")
   }
+  
+  @Test
+  def testreportDeadlocks {
+    var sw = new StackWise(dumpDeadlock)
+    sw.reportAll(System.out)
+  }
 }
