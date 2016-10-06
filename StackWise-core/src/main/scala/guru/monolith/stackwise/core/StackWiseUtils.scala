@@ -23,7 +23,7 @@ object StackWiseUtils {
       if (states.contains(stack.state)) filteredList += stack
     }
 
-    return filteredList
+    filteredList
   }
   
   def findThreadsInSpecificClasses(mainStackList: Seq[ThreadStack], partialClassNames: Array[String]): Seq[ThreadStack] = {
@@ -32,7 +32,7 @@ object StackWiseUtils {
       if (stack.executionPointList.size > 0 
           && startswithPhraseInArray(stack.executionPointList.get(0).className, true, partialClassNames) ) filteredList += stack
     }
-    return filteredList
+    filteredList
   }
   
   def findThreadsReferencingSpecificClasses(mainStackList: Seq[ThreadStack], partialClassNames: Array[String]): Seq[ThreadStack] = {
@@ -48,15 +48,15 @@ object StackWiseUtils {
         }
       }
     }
-    return filteredList
+    filteredList
   }
   
   private def startswithPhraseInArray(label:String, startsWith:Boolean, startsWithOptions: Array[String]):Boolean = {
     for (phrase <- startsWithOptions) {
-      if (startsWith && label.startsWith(phrase))  return true
-      else if (!startsWith && label.contains(phrase))  return true
+      if (startsWith && label.startsWith(phrase))  true
+      else if (!startsWith && label.contains(phrase))  true
     }
-    return false
+    false
   }
 
   def findBlockerUnknownThreads(mainStackList: Seq[ThreadStack]): Seq[ThreadStack] = {
@@ -74,7 +74,7 @@ object StackWiseUtils {
       }
     }
 
-    return blockedList
+    blockedList
   }
   
   def findDesiredLockOwnership(mainStackList: Seq[ThreadStack]): Map[String, String] = {
@@ -86,7 +86,7 @@ object StackWiseUtils {
       }
     }
     
-    return lockOwnershipMap.toMap
+    lockOwnershipMap.toMap
   }
 
   def findBlockingThreads(mainStackList: Seq[ThreadStack]): Seq[ThreadStack] = {
@@ -105,7 +105,7 @@ object StackWiseUtils {
       }
     }
 
-    return blockingList
+    blockingList
   }
   
   def findBlockingResourceMap(mainStackList: Seq[ThreadStack]): Map[ThreadStack,Seq[LockedResource]] = {
@@ -125,7 +125,7 @@ object StackWiseUtils {
       }
     }
     
-    return blockingResourceMap.toMap
+    blockingResourceMap.toMap
   }
   
   def findBlockingResources(mainStackList: Seq[ThreadStack]): Seq[BlockingResource] = {
@@ -147,7 +147,7 @@ object StackWiseUtils {
     val stackNameMap = HashMap.empty[String, ThreadStack]
     mainStackList.foreach { stack => stackNameMap.put(stack.id, stack) }
 
-    return stackNameMap.toMap
+    stackNameMap.toMap
   }
 
   def findLockOwnership(mainStackList: Seq[ThreadStack]): Map[String, String] = {
@@ -157,25 +157,25 @@ object StackWiseUtils {
       lockResourceSeq(stack.executionPointList).foreach { lock => lockOwnershipMap.put(lock.monitorLockName, stack.id) }
     }
 
-    return lockOwnershipMap.toMap
+    lockOwnershipMap.toMap
   }
 
   def findDesiredLock(stack: ThreadStack): LockedResource = {
     var locked: LockedResource = null
     stack.executionPointList.toSeq.foreach { point => if (point.blockedOn != null) locked = point.blockedOn }
-    return locked
+    locked
   }
 
   def executionPointSeq(mainStackList: Seq[ThreadStack]): Seq[ExecutionPoint] = {
     val pointList = new ListBuffer[ExecutionPoint]
     mainStackList.foreach { stack => pointList ++= stack.executionPointList }
-    return pointList
+    pointList
   }
 
   def lockResourceSeq(pointList: Seq[ExecutionPoint]): Seq[LockedResource] = {
     val lockList = new ListBuffer[LockedResource]
     pointList.foreach { point => lockList ++= point.lockedResourceList }
-    return lockList
+    lockList
   }
   
   def waitingResourceSeq(pointList: Seq[ExecutionPoint]): Seq[LockedResource] = {
@@ -185,7 +185,7 @@ object StackWiseUtils {
         lockList += point.blockedOn 
       }
     }
-    return lockList
+    lockList
   }
 
   def findClassMethodUsage(mainStackList: Seq[ThreadStack], packageQualifier: String = ""): Seq[HotSpot] = {
@@ -208,12 +208,12 @@ object StackWiseUtils {
       }
     }
 
-    return hotSpotMap.values.toSeq
+    hotSpotMap.values.toSeq
 
   }
 
   def formatHotSpot(hotSpot: HotSpot): String = {
-    return hotSpot.nbrMentions + " - " + hotSpot.className + "." + hotSpot.methodName + "() [" + hotSpot.sourceFileName + "]"
+    hotSpot.nbrMentions + " - " + hotSpot.className + "." + hotSpot.methodName + "() [" + hotSpot.sourceFileName + "]"
   }
 
   def formatStack(stack: ThreadStack, packageQualifier: String = "", messages:Array[String] = Array()): String = {
@@ -258,15 +258,15 @@ object StackWiseUtils {
 
     }
 
-    return builder.toString
+    builder.toString
   }
 
   def formatBlockingResource(lock: LockedResource): String = {
-    return String.format("	- waiting on <%s> (a %s)", lock.monitorLockName, lock.lockedClassName)
+    String.format("	- waiting on <%s> (a %s)", lock.monitorLockName, lock.lockedClassName)
   }
 
   def formatLockedResource(lock: LockedResource): String = {
-    return String.format("	- locked <%s> (a %s)", lock.monitorLockName, lock.lockedClassName)
+    String.format("	- locked <%s> (a %s)", lock.monitorLockName, lock.lockedClassName)
   }
 
   def formatPoint(point: ExecutionPoint): String = {
@@ -274,7 +274,7 @@ object StackWiseUtils {
     if (point.lineNbr != null) {
       sourceName = sourceName + ":" + point.lineNbr
     }
-    return "   at " + point.className + "." + point.methodName + "(" + sourceName + ")"
+    "   at " + point.className + "." + point.methodName + "(" + sourceName + ")"
   }
 
 }

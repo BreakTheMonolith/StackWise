@@ -73,15 +73,13 @@ object DumpParser {
       }
     }
     threadList+=currentThreadStack
-    
-    return threadList
   }
   
   private def parseLockedResource(line:String) : LockedResource = {
     val monitorLockName = line.substring(line.indexOf("<") + 1, line.indexOf(">"))
     val lockedClassName = line.substring(line.indexOf("(") + 3, line.indexOf(")"))
     
-    return new LockedResource(monitorLockName, lockedClassName)
+    new LockedResource(monitorLockName, lockedClassName)
   }
   
   private def parseExecutionPoint(line:String) : ExecutionPoint = {
@@ -101,7 +99,7 @@ object DumpParser {
       sourceFile = sourceText
     }
     
-    return new ExecutionPoint(className, methodName, sourceFile, sourceFileLine, null, new ArrayList[LockedResource])
+    new ExecutionPoint(className, methodName, sourceFile, sourceFileLine, null, new ArrayList[LockedResource])
   }
   
   private def parseThreadStack(line:String) : ThreadStack = {
@@ -109,12 +107,12 @@ object DumpParser {
     val threadName = line.substring(1, line.indexOf('"', 2))
     val threadId = parseThreadId(word)
     
-    return new ThreadStack(threadId, threadName, parseThreadStackState(word), parseMonitorId(word(word.length - 1)), new ArrayList[ExecutionPoint], new ArrayList[LockedResource])
+    new ThreadStack(threadId, threadName, parseThreadStackState(word), parseMonitorId(word(word.length - 1)), new ArrayList[ExecutionPoint], new ArrayList[LockedResource])
   } 
   
   private def parseThreadId(wordArray:Array[String]) : String = {
     for (word <- wordArray) {if (word.startsWith("tid=")) return word.substring(4)}
-    return wordArray(wordArray.length - 1)
+    wordArray(wordArray.length - 1)
   }
   
   private def parseThreadStackState(wordArray:Array[String]) : Thread.State = {
@@ -142,6 +140,6 @@ object DumpParser {
     if ("-".equals(word(0)) && !"None".equalsIgnoreCase(word(1)) && !"waiting".equalsIgnoreCase(word(1))) return LineType.Lock
     if ("-".equals(word(0)) && "waiting".equalsIgnoreCase(word(1))) return LineType.WaitLock
     
-    return LineType.WhiteSpace
+    LineType.WhiteSpace
   }
 }
