@@ -76,10 +76,14 @@ object DumpParser {
   }
   
   private def parseLockedResource(line:String) : LockedResource = {
-    val monitorLockName = line.substring(line.indexOf("<") + 1, line.indexOf(">"))
-    val lockedClassName = line.substring(line.indexOf("(") + 3, line.indexOf(")"))
-    
-    new LockedResource(monitorLockName, lockedClassName)
+    try {
+      val monitorLockName = line.substring(line.indexOf("<") + 1, line.indexOf(">"))
+      val lockedClassName = line.substring(line.lastIndexOf("(") + 3, line.lastIndexOf(")"))
+      
+      new LockedResource(monitorLockName, lockedClassName)
+    } catch {
+      case e: Exception => throw new RuntimeException("Barf on line: " + line, e);
+    }
   }
   
   private def parseExecutionPoint(line:String) : ExecutionPoint = {
