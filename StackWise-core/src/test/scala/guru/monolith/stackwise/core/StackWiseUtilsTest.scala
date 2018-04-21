@@ -64,4 +64,10 @@ class StackWiseUtilsTest extends StackWiseTestBase {
      Assert.assertEquals(2, blockingResourceList.size)
    }
    
+   @Test
+   def testfindThreadsReferencingSpecificClasses {
+     val blockingResourceList = StackWiseUtils.findThreadsReferencingSpecificClasses(stack6, Array("java.net", "java.io", "java.nio"))
+     Assert.assertEquals(10001, blockingResourceList.size)
+   }
+   
 }

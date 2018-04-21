@@ -53,8 +53,8 @@ object StackWiseUtils {
   
   private def startswithPhraseInArray(label:String, startsWith:Boolean, startsWithOptions: Array[String]):Boolean = {
     for (phrase <- startsWithOptions) {
-      if (startsWith && label.startsWith(phrase))  true
-      else if (!startsWith && label.contains(phrase))  true
+      if (startsWith && label.startsWith(phrase))  return true
+      else if (!startsWith && label.contains(phrase))  return true
     }
     false
   }
