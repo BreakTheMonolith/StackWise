@@ -13,8 +13,8 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<encoding>UTF-8</encoding>
-		<scala.version>2.11.8</scala.version>
-		<scala.compat.version>2.11</scala.compat.version>
+		<scala.version>2.12.3</scala.version>
+		<scala.compat.version>2.12</scala.compat.version>
 		<scoverage.plugin.version>1.1.1</scoverage.plugin.version>
 	</properties>
 
@@ -60,13 +60,13 @@
 		<dependency>
 			<groupId>org.specs2</groupId>
 			<artifactId>specs2-core_${scala.compat.version}</artifactId>
-			<version>2.4.16</version>
+			<version>4.0.4-3593406-20180327185327</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.scalatest</groupId>
 			<artifactId>scalatest_${scala.compat.version}</artifactId>
-			<version>2.2.4</version>
+			<version>3.0.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -79,7 +79,7 @@
 				<!-- see http://davidb.github.com/scala-maven-plugin -->
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.3.2</version>
 				<executions>
 					<execution>
 						<goals>
