@@ -22,6 +22,7 @@ trait StackWiseTestBase {
   val dumpFileName3 = "src/test/dumps/Thread-dump-3.txt"
   val dumpFileName4 = "src/test/dumps/Thread-dump-4.txt"
   val dumpFileName5 = "src/test/dumps/Thread-dump-5.txt"
+  val dumpFileName6 = "src/test/dumps/Thread-dump-6.txt"
   val dumpFileNameDeadlock = "src/test/dumps/Thread-dump-deadlock.txt"
   
   var dump1:String = _
@@ -29,6 +30,7 @@ trait StackWiseTestBase {
   var dump3:String = _
   var dump4:String = _
   var dump5:String = _
+  var dump6:String = _
   var dumpDeadlock:String = _
   
   var stack1:Seq[ThreadStack] = _
@@ -36,6 +38,7 @@ trait StackWiseTestBase {
   var stack3:Seq[ThreadStack] = _
   var stack4:Seq[ThreadStack] = _
   var stack5:Seq[ThreadStack] = _
+  var stack6:Seq[ThreadStack] = _
   var stackDeadlock:Seq[ThreadStack] = _
   
   @Before 
@@ -45,6 +48,7 @@ trait StackWiseTestBase {
     dump3 = FileUtils.readFileToString(new File(dumpFileName3), "UTF-8");
     dump4 = FileUtils.readFileToString(new File(dumpFileName4), "UTF-8");
     dump5 = FileUtils.readFileToString(new File(dumpFileName5), "UTF-8");
+    dump6 = FileUtils.readFileToString(new File(dumpFileName6), "UTF-8");
     dumpDeadlock = FileUtils.readFileToString(new File(dumpFileNameDeadlock), "UTF-8");
     
     stack1 = DumpParser.parse(dump1)
@@ -52,6 +56,7 @@ trait StackWiseTestBase {
     stack3 = DumpParser.parse(dump3)
     stack4 = DumpParser.parse(dump4)
     stack5 = DumpParser.parse(dump5)
+    stack6 = DumpParser.parse(dump6)
     stackDeadlock = DumpParser.parse(dumpDeadlock)
   }
 }
