@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>StackWise</groupId>
 		<artifactId>StackWise</artifactId>
-		<version>0.1.4</version>
+		<version>0.1.5</version>
 	</parent>
 	<groupId>StackWise-core</groupId>
 	<artifactId>StackWise-core</artifactId>
